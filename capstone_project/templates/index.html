@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Post Suggestions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .chatbox {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6p4IOMelvJEnCC1gF81Fwl8e1pVM4l9v" crossorigin="anonymous">
+</head>
+<body>
+    <div class="chatbox">
+        <h1 class="mb-4">Social Media Post Suggestions</h1>
+
+    <form method="post" class="mb-4">
+        <div class="form-group">
+            <label for="platform">Select Platform:</label>
+            <select class="form-control" name="platform" id="platform">
+                <option value="Facebook">Facebook</option>
+                <option value="Instagram">Instagram</option>
+                <option value="TikTok">TikTok</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="topic">Enter Topic:</label>
+            <input type="text" class="form-control" name="topic" id="topic" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Generate Suggestions</button>
+    </form>
+
+    {% if post_suggestions %}
+        <h2>Suggested Post:</h2>
+        <p>{{ post_suggestions }}</p>
+    {% endif %}
+    </div>
+
+
+    <!-- Add Bootstrap JS and Popper.js scripts (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6p4IOMelvJEnCC1gF81Fwl8e1pVM4l9v" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6p4IOMelvJEnCC1gF81Fwl8e1pVM4l9v" crossorigin="anonymous"></script>
+</body>
+</html>

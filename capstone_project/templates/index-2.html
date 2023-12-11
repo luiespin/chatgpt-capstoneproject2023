@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .chatbox {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbox">
+        <h2>ChatGPT API Chatbox</h2>
+        <form action="/send_message" method="post">
+            <input type="text" name="user_message" placeholder="Type your message..." required>
+            <button type="submit">Send</button>
+        </form>
+        <div id="chat-container">
+            {% if chatgpt_message %}
+            <div class="chatgpt-message">{{ chatgpt_message }}</div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
